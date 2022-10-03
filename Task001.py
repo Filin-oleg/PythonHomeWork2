@@ -2,11 +2,11 @@
 
 
 def inputNumbers(text):
-    it_OK = False
-    while not it_OK:
+    isfloat = False
+    while not isfloat:
         try:
-            number = int(input(f"{text}"))
-            it_OK = True
+            number = float(input(f"{text}"))
+            isfloat = True
         except ValueError:
             print("Это не число! Повторите ввод")
     return number
@@ -15,12 +15,12 @@ def inputNumbers(text):
 def sum(x):
     if float(x) < 0:
         x = float(x) * (-1)
-    number = 0
+    sum = 0
 
     for i in str(x):
         if i != '.':
-            number += int(i)
-    return number
+            sum += int(i)
+    return sum
 
 
 x = inputNumbers("Введите число ")
